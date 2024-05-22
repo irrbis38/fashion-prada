@@ -1,0 +1,46 @@
+@import "./vars.scss";
+@import "./mixins.scss";
+@import "./fonts.scss";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: $font_main;
+  color: $color_main;
+  background-color: $color_white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 50px;
+
+  @include lg {
+    padding: 0 30px;
+  }
+
+  @include xs {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
